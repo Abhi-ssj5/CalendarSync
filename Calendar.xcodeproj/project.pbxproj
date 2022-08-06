@@ -8,21 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		478DCB37289E88BB002EF08F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB36289E88BB002EF08F /* AppDelegate.swift */; };
-		478DCB3B289E88BB002EF08F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB3A289E88BB002EF08F /* ViewController.swift */; };
-		478DCB3E289E88BB002EF08F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478DCB3C289E88BB002EF08F /* Main.storyboard */; };
 		478DCB40289E88BF002EF08F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478DCB3F289E88BF002EF08F /* Assets.xcassets */; };
 		478DCB43289E88BF002EF08F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478DCB41289E88BF002EF08F /* LaunchScreen.storyboard */; };
+		478DCB4D289E9E6B002EF08F /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 478DCB4C289E9E6B002EF08F /* credentials.plist */; };
+		478DCB53289E9F15002EF08F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB51289E9F15002EF08F /* HomeViewController.swift */; };
+		478DCB54289E9F15002EF08F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478DCB52289E9F15002EF08F /* HomeViewController.xib */; };
+		478DCB59289E9F82002EF08F /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB58289E9F82002EF08F /* HomeBuilder.swift */; };
+		478DCB5C289E9FC8002EF08F /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB5B289E9FC8002EF08F /* HomeProtocols.swift */; };
 		FE4C338B136BA42E943F42C9 /* Pods_Calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2375F3ED323854C2A465A2 /* Pods_Calendar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		478DCB33289E88BB002EF08F /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478DCB36289E88BB002EF08F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		478DCB3A289E88BB002EF08F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		478DCB3D289E88BB002EF08F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		478DCB3F289E88BF002EF08F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		478DCB42289E88BF002EF08F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		478DCB44289E88BF002EF08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		478DCB4C289E9E6B002EF08F /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		478DCB51289E9F15002EF08F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		478DCB52289E9F15002EF08F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		478DCB58289E9F82002EF08F /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		478DCB5B289E9FC8002EF08F /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		75975CEEF78801760A8F22CA /* Pods-Calendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.debug.xcconfig"; path = "Target Support Files/Pods-Calendar/Pods-Calendar.debug.xcconfig"; sourceTree = "<group>"; };
 		8D2375F3ED323854C2A465A2 /* Pods_Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DBCD6DCCA03D8B3E809494 /* Pods-Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.release.xcconfig"; path = "Target Support Files/Pods-Calendar/Pods-Calendar.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,7 +52,6 @@
 				75975CEEF78801760A8F22CA /* Pods-Calendar.debug.xcconfig */,
 				99DBCD6DCCA03D8B3E809494 /* Pods-Calendar.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -71,14 +76,81 @@
 		478DCB35289E88BB002EF08F /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				478DCB36289E88BB002EF08F /* AppDelegate.swift */,
-				478DCB3A289E88BB002EF08F /* ViewController.swift */,
-				478DCB3C289E88BB002EF08F /* Main.storyboard */,
-				478DCB3F289E88BF002EF08F /* Assets.xcassets */,
+				478DCB4E289E9E89002EF08F /* AppDelegate */,
+				478DCB4F289E9EA5002EF08F /* Home */,
 				478DCB41289E88BF002EF08F /* LaunchScreen.storyboard */,
-				478DCB44289E88BF002EF08F /* Info.plist */,
+				478DCB4A289E9E48002EF08F /* Resources */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		478DCB4A289E9E48002EF08F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				478DCB3F289E88BF002EF08F /* Assets.xcassets */,
+				478DCB4B289E9E60002EF08F /* GooglePlist */,
+				478DCB44289E88BF002EF08F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		478DCB4B289E9E60002EF08F /* GooglePlist */ = {
+			isa = PBXGroup;
+			children = (
+				478DCB4C289E9E6B002EF08F /* credentials.plist */,
+			);
+			path = GooglePlist;
+			sourceTree = "<group>";
+		};
+		478DCB4E289E9E89002EF08F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				478DCB36289E88BB002EF08F /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		478DCB4F289E9EA5002EF08F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				478DCB5A289E9FBD002EF08F /* Protocols */,
+				478DCB57289E9F72002EF08F /* Builder */,
+				478DCB55289E9F1F002EF08F /* Scene */,
+				478DCB56289E9F27002EF08F /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		478DCB55289E9F1F002EF08F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				478DCB51289E9F15002EF08F /* HomeViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		478DCB56289E9F27002EF08F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				478DCB52289E9F15002EF08F /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		478DCB57289E9F72002EF08F /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				478DCB58289E9F82002EF08F /* HomeBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		478DCB5A289E9FBD002EF08F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				478DCB5B289E9FC8002EF08F /* HomeProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BD63FC97B2077E020C1D00DC /* Frameworks */ = {
@@ -149,8 +221,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				478DCB43289E88BF002EF08F /* LaunchScreen.storyboard in Resources */,
+				478DCB4D289E9E6B002EF08F /* credentials.plist in Resources */,
+				478DCB54289E9F15002EF08F /* HomeViewController.xib in Resources */,
 				478DCB40289E88BF002EF08F /* Assets.xcassets in Resources */,
-				478DCB3E289E88BB002EF08F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,22 +259,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				478DCB3B289E88BB002EF08F /* ViewController.swift in Sources */,
+				478DCB5C289E9FC8002EF08F /* HomeProtocols.swift in Sources */,
+				478DCB59289E9F82002EF08F /* HomeBuilder.swift in Sources */,
 				478DCB37289E88BB002EF08F /* AppDelegate.swift in Sources */,
+				478DCB53289E9F15002EF08F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		478DCB3C289E88BB002EF08F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				478DCB3D289E88BB002EF08F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		478DCB41289E88BF002EF08F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -339,16 +406,15 @@
 				INFOPLIST_FILE = Calendar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ssj5.Calendar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.calendar.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -368,16 +434,15 @@
 				INFOPLIST_FILE = Calendar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ssj5.Calendar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.calendar.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
