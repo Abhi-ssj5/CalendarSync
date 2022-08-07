@@ -6,6 +6,6 @@ target 'Calendar' do
   use_frameworks!
 
   # Pods for Calendar
-  pod 'GoogleSignIn', '~> 4.1.1'
+  pod 'GoogleSignIn'
 
 end
