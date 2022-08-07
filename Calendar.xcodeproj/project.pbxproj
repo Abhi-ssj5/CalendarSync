@@ -139,6 +139,7 @@
 				478DCB57289E9F72002EF08F /* Builder */,
 				478DCB55289E9F1F002EF08F /* Scene */,
 				478DCB56289E9F27002EF08F /* View */,
+				E065B3B2289EDEAA00E04769 /* AppleCalenderTest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -349,6 +350,7 @@
 				478DCB73289FDE1E002EF08F /* HomeRouter.swift in Sources */,
 				478DCB71289FDD01002EF08F /* HomeInteractor.swift in Sources */,
 				478DCB59289E9F82002EF08F /* HomeBuilder.swift in Sources */,
+				E065B3B3289EDEAA00E04769 /* AppleCalenderTest.swift in Sources */,
 				478DCB37289E88BB002EF08F /* AppDelegate.swift in Sources */,
 				478DCB6F289FDC9B002EF08F /* HomePresenter.swift in Sources */,
 				478DCB66289EB3C7002EF08F /* EnvironmentInterface.swift in Sources */,
