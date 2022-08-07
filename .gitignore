@@ -31,5 +31,6 @@ build/
 *.xccheckout
 
 xcuserdata/
+xcshareddata/
 
 Pods/*

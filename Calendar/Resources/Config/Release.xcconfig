@@ -1,0 +1,13 @@
+//
+//  Release.xcconfig
+//  Calendar
+//
+//  Created by Abhijeet Choudhary on 07/08/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-Calendar/Pods-Calendar.release.xcconfig"
+
+GOOGLE_CLIENT_ID = 159311794366-02ndlbrqioo193lcj89s7ttarhip9h5m.apps.googleusercontent.com

@@ -13,6 +13,10 @@ final class HomeViewController: UIViewController, HomeView {
   
   @IBOutlet private weak var loginButton: UIButton!
   
+  // MARK: - Public property
+  
+  var presenter: HomePresenter!
+  
   // MARK: - LifeCycle methods
   
   override func viewDidLoad() {
@@ -23,7 +27,7 @@ final class HomeViewController: UIViewController, HomeView {
   // MARK: - Button Actions
   
   @IBAction private func loginButtonTapped(_ sender: UIButton) {
-    
+    presenter.loginButtonTapped()
   }
   
 }
