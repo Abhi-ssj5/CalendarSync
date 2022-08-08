@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class HomeRouterImplementation: HomeRouter {
   
@@ -22,5 +23,12 @@ final class HomeRouterImplementation: HomeRouter {
       return
     }
     Authentication.shared.signIn(viewController: viewController, completion: completion)
+  }
+  
+  func presentAlert(title: String, message: String) {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let okButton = UIAlertAction(title: "OK", style: .destructive)
+    alertController.addAction(okButton)
+    view?.present(alertController, animated: true)
   }
 }
