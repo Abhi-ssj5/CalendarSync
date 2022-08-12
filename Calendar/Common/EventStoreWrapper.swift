@@ -9,11 +9,14 @@ import EventKit
 
 struct EventStoreWrapper: PermissionInterface {
   let store: EKEventStore
-  init() {
+  var event: EKEntityType
+  
+  init(_ event: EKEntityType) {
+    self.event = event
     store = EKEventStore()
   }
   
-  func getPermissionStatus(_ event: EKEntityType) -> (title: String, message: String) {
+  func getPermissionStatus() -> (title: String, message: String) {
     let permissions = EKEventStore.authorizationStatus(for: event)
     switch permissions {
     case .notDetermined:
@@ -27,7 +30,7 @@ struct EventStoreWrapper: PermissionInterface {
     }
   }
   
-  func requestPermissions(_ event: EKEntityType) {
+  func requestPermissions() {
     let permissions = EKEventStore.authorizationStatus(for: event)
     switch permissions {
     case .notDetermined:

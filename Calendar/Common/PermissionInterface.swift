@@ -9,5 +9,7 @@ import EventKit
 
 protocol PermissionInterface {
   var store: EKEventStore { get }
-  func requestPermissions(_ event: EKEntityType) -> Void
+  var event: EKEntityType { get set }
+  
+  func requestPermissions() -> Void
 }

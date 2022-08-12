@@ -37,16 +37,12 @@ final class HomePresenterImplementation: HomePresenter {
   }
   
   func calendarPermissionButtonTapped() {
-    //    EventStoreWrapper().requestPermissions(.reminder)
-    //    EventStoreWrapper().requestPermissions(.event)
-    let status = EventStoreWrapper().getPermissionStatus(.event)
+    let status = EventStoreWrapper(.event).getPermissionStatus()
     router.presentAlert(title: status.title, message: status.message)
   }
   
   func reminderPermissionButtonTapped() {
-    //    EventStoreWrapper().requestPermissions(.reminder)
-    //    EventStoreWrapper().requestPermissions(.event)
-    let status = EventStoreWrapper().getPermissionStatus(.reminder)
+    let status = EventStoreWrapper(.reminder).getPermissionStatus()
     router.presentAlert(title: status.title, message: status.message)
   }
 }
