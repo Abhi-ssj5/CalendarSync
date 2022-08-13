@@ -21,7 +21,8 @@ protocol HomePresenter: AnyObject {
   var interactor: HomeInteractor! { get }
   
   func loginButtonTapped()
-  
+  func calendarPermissionButtonTapped()
+  func reminderPermissionButtonTapped()
 }
 
 protocol HomeInteractor: AnyObject {
@@ -39,4 +40,5 @@ protocol HomeRouter: AnyObject {
   var view: HomeView? { get }
   
   func presentSignIn(completion: @escaping SignInResponeBlock)
+  func presentAlert(title: String, message: String)
 }

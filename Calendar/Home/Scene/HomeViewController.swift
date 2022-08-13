@@ -30,4 +30,11 @@ final class HomeViewController: UIViewController, HomeView {
     presenter.loginButtonTapped()
   }
   
+  @IBAction private func calendarPermissionButtonTapped() {
+    presenter.calendarPermissionButtonTapped()
+  }
+  
+  @IBAction private func reminderPermissionButtonTapped() {
+    presenter.reminderPermissionButtonTapped()
+  }
 }

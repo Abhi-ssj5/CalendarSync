@@ -17,5 +17,9 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSCalendarsUsageDescription</key>
+    <string>Click Yes. Bitch</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>Click Yes. Bitch</string>
 </dict>
 </plist>
