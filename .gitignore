@@ -34,3 +34,5 @@ xcuserdata/
 xcshareddata/
 
 Pods/*
+
+.vscode/
