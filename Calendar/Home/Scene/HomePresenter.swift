@@ -8,25 +8,25 @@
 import Foundation
 
 final class HomePresenterImplementation: HomePresenter {
-  
+
   // MAKR: - Private property
-  
+
   private(set) weak var view: HomeView?
   let router: HomeRouter
-  
+
   // MARK: - Public property
-  
+
   var interactor: HomeInteractor!
-  
+
   // MARK: - Init
-  
+
   init(view: HomeView, router: HomeRouter) {
     self.view = view
     self.router = router
   }
-  
+
   // MARK: - HomePresenter methods
-  
+
   func loginButtonTapped() {
     router.presentSignIn(completion: { [weak self] result in
       guard let self = self else {
@@ -35,14 +35,14 @@ final class HomePresenterImplementation: HomePresenter {
       self.interactor.handleLogin(result: result)
     })
   }
-  
+
   func calendarPermissionButtonTapped() {
-    let status = EventStoreWrapper(.event).getPermissionStatus()
+    let status = EventStoreWrapper(.event).requestPermissions()
     router.presentAlert(title: status.title, message: status.message)
   }
-  
+
   func reminderPermissionButtonTapped() {
-    let status = EventStoreWrapper(.reminder).getPermissionStatus()
+    let status = EventStoreWrapper(.reminder).requestPermissions()
     router.presentAlert(title: status.title, message: status.message)
   }
 }
@@ -50,13 +50,13 @@ final class HomePresenterImplementation: HomePresenter {
 // MARK: - HomeInteractorOutput methods
 
 extension HomePresenterImplementation: HomeInteractorOutput {
-  
+
   func handleLoginSuccess() {
     debugPrint("Login Success")
   }
-  
+
   func handleLoginFailure(error: Error) {
     debugPrint(error.localizedDescription)
   }
-  
+
 }

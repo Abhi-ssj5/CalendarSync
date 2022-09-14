@@ -8,15 +8,15 @@
 import Foundation
 
 final class HomeInteractorImplementation: HomeInteractor {
-  
+
   private(set) weak var output: HomeInteractorOutput?
-  
+
   init(output: HomeInteractorOutput) {
     self.output = output
   }
-  
+
   // MARK: - HomeInteractor methods
-  
+
   func handleLogin(result: SignInResponse) {
     switch result {
     case .success:
@@ -25,5 +25,5 @@ final class HomeInteractorImplementation: HomeInteractor {
       output?.handleLoginFailure(error: error)
     }
   }
-  
+
 }
