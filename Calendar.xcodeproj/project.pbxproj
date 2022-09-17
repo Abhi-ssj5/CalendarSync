@@ -23,6 +23,7 @@
 		478DCB6F289FDC9B002EF08F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB6E289FDC9B002EF08F /* HomePresenter.swift */; };
 		478DCB71289FDD01002EF08F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB70289FDD01002EF08F /* HomeInteractor.swift */; };
 		478DCB73289FDE1E002EF08F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB72289FDE1E002EF08F /* HomeRouter.swift */; };
+		4792D8F028D5EE37006B459D /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4792D8EF28D5EE37006B459D /* CalendarManager.swift */; };
 		E0F0F776289FF0A90064CE24 /* EventStoreWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0F775289FF0A90064CE24 /* EventStoreWrapper.swift */; };
 		E0F0F77A289FF1470064CE24 /* PermissionInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0F779289FF1470064CE24 /* PermissionInterface.swift */; };
 		E2473F4CDE008F50FC27AD1B /* Pods_Calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D64AFCEAB0906836421119 /* Pods_Calendar.framework */; };
@@ -49,6 +50,7 @@
 		478DCB6E289FDC9B002EF08F /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		478DCB70289FDD01002EF08F /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		478DCB72289FDE1E002EF08F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		4792D8EF28D5EE37006B459D /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		692EE88045B162D2045B1277 /* Pods-Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.release.xcconfig"; path = "Target Support Files/Pods-Calendar/Pods-Calendar.release.xcconfig"; sourceTree = "<group>"; };
 		84D64AFCEAB0906836421119 /* Pods_Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F0F775289FF0A90064CE24 /* EventStoreWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStoreWrapper.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				E0F0F775289FF0A90064CE24 /* EventStoreWrapper.swift */,
 				478DCB6B289FD613002EF08F /* Error */,
 				E0F0F779289FF1470064CE24 /* PermissionInterface.swift */,
+				4792D8EF28D5EE37006B459D /* CalendarManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				478DCB6F289FDC9B002EF08F /* HomePresenter.swift in Sources */,
 				E0F0F77A289FF1470064CE24 /* PermissionInterface.swift in Sources */,
 				478DCB66289EB3C7002EF08F /* EnvironmentInterface.swift in Sources */,
+				4792D8F028D5EE37006B459D /* CalendarManager.swift in Sources */,
 				478DCB64289EB383002EF08F /* Environment.swift in Sources */,
 				478DCB6D289FD68D002EF08F /* CustomError.swift in Sources */,
 				478DCB5F289EA76D002EF08F /* Authentication.swift in Sources */,
