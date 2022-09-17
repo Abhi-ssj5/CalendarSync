@@ -32,7 +32,7 @@ protocol HomeInteractor: AnyObject {
 }
 
 protocol HomeInteractorOutput: AnyObject {
-  func handleLoginSuccess()
+  func handleLoginSuccess(response: LoginResponse)
   func handleLoginFailure(error: Error)
 }
 

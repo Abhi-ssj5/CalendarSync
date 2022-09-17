@@ -19,8 +19,8 @@ final class HomeInteractorImplementation: HomeInteractor {
   
   func handleLogin(result: SignInResponse) {
     switch result {
-    case .success:
-      output?.handleLoginSuccess()
+    case .success(let userData):
+      output?.handleLoginSuccess(response: userData)
     case .failure(let error):
       output?.handleLoginFailure(error: error)
     }
