@@ -7,7 +7,8 @@
 
 import GoogleSignIn
 
-typealias SignInResponse = Result<GIDGoogleUser, Error>
+typealias LoginResponse = GIDGoogleUser
+typealias SignInResponse = Result<LoginResponse, Error>
 typealias SignInResponeBlock = (SignInResponse) -> Void
 
 protocol AuthenticationInterface {

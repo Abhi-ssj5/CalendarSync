@@ -51,7 +51,7 @@ final class HomePresenterImplementation: HomePresenter {
 
 extension HomePresenterImplementation: HomeInteractorOutput {
   
-  func handleLoginSuccess() {
+  func handleLoginSuccess(response: LoginResponse) {
     debugPrint("Login Success")
   }
   
