@@ -29,6 +29,7 @@ protocol HomeInteractor: AnyObject {
   var output: HomeInteractorOutput? { get }
 
   func handleLogin(result: SignInResponse)
+  func fetchCalendars()
 }
 
 protocol HomeInteractorOutput: AnyObject {

@@ -10,9 +10,12 @@ import Foundation
 final class HomeInteractorImplementation: HomeInteractor {
 
   private(set) weak var output: HomeInteractorOutput?
+  private let calendarManager: CalendarManager
 
-  init(output: HomeInteractorOutput) {
+  init(output: HomeInteractorOutput,
+       calendarManager: CalendarManager) {
     self.output = output
+    self.calendarManager = calendarManager
   }
 
   // MARK: - HomeInteractor methods
@@ -26,4 +29,8 @@ final class HomeInteractorImplementation: HomeInteractor {
     }
   }
 
+  func fetchCalendars() {
+    calendarManager.fetchCalendars()
+  }
+  
 }

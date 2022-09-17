@@ -46,9 +46,8 @@
                         <action selector="reminderPermissionButtonTapped" destination="-1" eventType="touchUpInside" id="Hun-DK-gO9"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtv-XC-3VD">
-                    <rect key="frame" x="153" y="488" width="108" height="54"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtv-XC-3VD">
+                    <rect key="frame" x="153" y="496" width="108" height="54"/>
                     <color key="backgroundColor" systemColor="tintColor"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                     <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
@@ -64,10 +63,12 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="rtv-XC-3VD" firstAttribute="top" secondItem="P7i-5t-otm" secondAttribute="bottom" constant="16" id="1qk-6z-TTk"/>
                 <constraint firstItem="QYU-Rp-TzY" firstAttribute="centerX" secondItem="P7i-5t-otm" secondAttribute="centerX" id="KIh-L6-IBO"/>
                 <constraint firstItem="P7i-5t-otm" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="LFG-Qw-27J"/>
                 <constraint firstItem="P7i-5t-otm" firstAttribute="top" secondItem="QYU-Rp-TzY" secondAttribute="bottom" constant="16" id="OeN-up-tXA"/>
                 <constraint firstItem="P7i-5t-otm" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="SvL-5r-gB7"/>
+                <constraint firstItem="rtv-XC-3VD" firstAttribute="centerX" secondItem="P7i-5t-otm" secondAttribute="centerX" id="zWW-xo-wIn"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
         </view>

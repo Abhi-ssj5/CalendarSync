@@ -24,8 +24,12 @@ final class HomePresenterImplementation: HomePresenter {
     self.view = view
     self.router = router
   }
+  
+}
 
-  // MARK: - HomePresenter methods
+// MARK: - HomePresenter methods
+
+extension HomePresenterImplementation {
 
   func loginButtonTapped() {
     router.presentSignIn(completion: { [weak self] result in
@@ -53,6 +57,7 @@ extension HomePresenterImplementation: HomeInteractorOutput {
 
   func handleLoginSuccess() {
     debugPrint("Login Success")
+    interactor.fetchCalendars()
   }
 
   func handleLoginFailure(error: Error) {
