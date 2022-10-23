@@ -9,28 +9,27 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  
+
   var window: UIWindow?
-  
+
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    
+
     let window = UIWindow()
     let home: HomeView = HomeBuilder.build()
     let navigationController = UINavigationController(rootViewController: home)
     window.rootViewController = navigationController
     window.makeKeyAndVisible()
-    
+
     self.window = window
-    
+
     return true
   }
-  
+
   func application(_ app: UIApplication,
                    open url: URL,
-                   options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+                   options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
     return Authentication.shared.isCallbackUrlHandled(url)
   }
-  
-}
 
+}

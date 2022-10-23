@@ -23,6 +23,7 @@
 		478DCB6F289FDC9B002EF08F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB6E289FDC9B002EF08F /* HomePresenter.swift */; };
 		478DCB71289FDD01002EF08F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB70289FDD01002EF08F /* HomeInteractor.swift */; };
 		478DCB73289FDE1E002EF08F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DCB72289FDE1E002EF08F /* HomeRouter.swift */; };
+		4792D8F028D5EE37006B459D /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4792D8EF28D5EE37006B459D /* CalendarManager.swift */; };
 		E0F0F776289FF0A90064CE24 /* EventStoreWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0F775289FF0A90064CE24 /* EventStoreWrapper.swift */; };
 		E0F0F77A289FF1470064CE24 /* PermissionInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0F779289FF1470064CE24 /* PermissionInterface.swift */; };
 		E2473F4CDE008F50FC27AD1B /* Pods_Calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D64AFCEAB0906836421119 /* Pods_Calendar.framework */; };
@@ -49,6 +50,7 @@
 		478DCB6E289FDC9B002EF08F /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		478DCB70289FDD01002EF08F /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		478DCB72289FDE1E002EF08F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		4792D8EF28D5EE37006B459D /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		692EE88045B162D2045B1277 /* Pods-Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.release.xcconfig"; path = "Target Support Files/Pods-Calendar/Pods-Calendar.release.xcconfig"; sourceTree = "<group>"; };
 		84D64AFCEAB0906836421119 /* Pods_Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F0F775289FF0A90064CE24 /* EventStoreWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStoreWrapper.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				E0F0F775289FF0A90064CE24 /* EventStoreWrapper.swift */,
 				478DCB6B289FD613002EF08F /* Error */,
 				E0F0F779289FF1470064CE24 /* PermissionInterface.swift */,
+				4792D8EF28D5EE37006B459D /* CalendarManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				478DCB30289E88BB002EF08F /* Frameworks */,
 				478DCB31289E88BB002EF08F /* Resources */,
 				9CEFD881E27C79FE8551F479 /* [CP] Embed Pods Frameworks */,
+				E073A1FC28CF233F001A9941 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -345,6 +349,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E073A1FC28CF233F001A9941 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -361,6 +382,7 @@
 				478DCB6F289FDC9B002EF08F /* HomePresenter.swift in Sources */,
 				E0F0F77A289FF1470064CE24 /* PermissionInterface.swift in Sources */,
 				478DCB66289EB3C7002EF08F /* EnvironmentInterface.swift in Sources */,
+				4792D8F028D5EE37006B459D /* CalendarManager.swift in Sources */,
 				478DCB64289EB383002EF08F /* Environment.swift in Sources */,
 				478DCB6D289FD68D002EF08F /* CustomError.swift in Sources */,
 				478DCB5F289EA76D002EF08F /* Authentication.swift in Sources */,
@@ -507,10 +529,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E749MJ873J;
+				DEVELOPMENT_TEAM = 46GMU5DBT2;
 				GENERATE_INFOPLIST_FILE = YES;
 				GOOGLE_CLIENT_ID = "$(GOOGLE_CLIENT_ID)";
 				INFOPLIST_FILE = Calendar/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Need Permissions to Prevent Duplicate Events";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "Need Permissions to Prevent Duplicate Events";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -537,10 +562,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E749MJ873J;
+				DEVELOPMENT_TEAM = 46GMU5DBT2;
 				GENERATE_INFOPLIST_FILE = YES;
 				GOOGLE_CLIENT_ID = "$(GOOGLE_CLIENT_ID)";
 				INFOPLIST_FILE = Calendar/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Need Permissions to Prevent Duplicate Events";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "Need Permissions to Prevent Duplicate Events";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

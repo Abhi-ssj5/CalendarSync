@@ -8,7 +8,7 @@
 import Foundation
 
 protocol EnvironmentInterface {
-  
+
   var googleClientId: String? { get }
-  
+
 }

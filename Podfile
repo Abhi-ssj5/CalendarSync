@@ -7,5 +7,6 @@ target 'Calendar' do
 
   # Pods for Calendar
   pod 'GoogleSignIn'
+  pod 'GoogleAPIClientForREST/Calendar', ~> '2.0.1'
 
 end

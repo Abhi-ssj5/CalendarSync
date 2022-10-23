@@ -8,15 +8,18 @@
 import Foundation
 
 final class HomeInteractorImplementation: HomeInteractor {
-  
+
   private(set) weak var output: HomeInteractorOutput?
-  
-  init(output: HomeInteractorOutput) {
+  private let calendarManager: CalendarManager
+
+  init(output: HomeInteractorOutput,
+       calendarManager: CalendarManager) {
     self.output = output
+    self.calendarManager = calendarManager
   }
-  
+
   // MARK: - HomeInteractor methods
-  
+
   func handleLogin(result: SignInResponse) {
     switch result {
     case .success:
@@ -24,6 +27,10 @@ final class HomeInteractorImplementation: HomeInteractor {
     case .failure(let error):
       output?.handleLoginFailure(error: error)
     }
+  }
+
+  func fetchCalendars() {
+    calendarManager.fetchCalendars()
   }
   
 }
